@@ -1,14 +1,14 @@
 <mat-toolbar color="secondary">
   <mat-toolbar-row class="container">
-    <a mat-button *ngIf="authService.isLoggedIn" routerLink="/">Home</a>
-    <a mat-button *ngIf="authService.isLoggedIn" routerLink="/cars">Cars</a>
-    <a mat-button *ngIf="authService.isLoggedIn" routerLink="/car/add">Add Car</a>
-    <a mat-button *ngIf="authService.isLoggedIn" routerLink="/aboutme">About Me</a>
-    <a mat-button routerLink="/register">Register</a>
-    <a mat-button routerLink="/login">Login</a>
+    <a mat-button  routerLink="/">Home</a>
+    <a mat-button *ngIf="authService.isLoggedIn()" routerLink="/cars">Cars</a>
+    <a mat-button *ngIf="authService.isLoggedIn()"  routerLink="/car/add">Add Car</a>
+    <a mat-button *ngIf="authService.isLoggedIn()" routerLink="/aboutme">About Me</a>
+    <a mat-button *ngIf="!authService.isLoggedIn()" routerLink="/register">Register</a>
+    <a mat-button *ngIf="!authService.isLoggedIn()" routerLink="/login">Login</a>
     <div>
     </div>
-    <app-logout *ngIf="authService.isLoggedIn"> </app-logout>
+    <app-logout>  </app-logout>
   </mat-toolbar-row>
 </mat-toolbar>
 

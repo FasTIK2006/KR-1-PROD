@@ -10,22 +10,27 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 const routes: Routes = [
-  { path: '', component: HomeComponent, canActivate: [AuthGuard]
+  {
+    path: '', component: HomeComponent,
 
   },
-  { path: 'cars', component: CarsComponent, canActivate: [AuthGuard]
+  {
+    path: 'cars', component: CarsComponent, canActivate: [AuthGuard]
   },
-  { path: 'car/add', component: AddCarComponent,  canActivate: [AuthGuard]
+  {
+    path: 'car/add', component: AddCarComponent, canActivate: [AuthGuard]
 
   },
-  { path: 'car/:id', component: CarComponent,   canActivate: [AuthGuard]
+  {
+    path: 'car/:id', component: CarComponent, canActivate: [AuthGuard]
 
   },
-  { path: 'aboutme', component: AboutMeComponent,  canActivate: [AuthGuard] 
+  {
+    path: 'aboutme', component: AboutMeComponent,
 
   },
-  {path: 'login', component: LoginComponent,},
-  {path: 'register', component: RegisterComponent},
+  { path: 'login', component: LoginComponent, },
+  { path: 'register', component: RegisterComponent },
 
   { path: '**', component: NotFoundComponent },
 

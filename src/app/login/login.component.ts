@@ -11,7 +11,7 @@ export class LoginComponent {
   incorrectPassword: boolean = false;
   incorrectMail: boolean = false;
   entrance = false;
-  constructor(private authService: AuthService) { }
+  constructor(public authService: AuthService) { }
 
   ngOnInit(): void { }
   login(): void {

@@ -48,7 +48,7 @@ import { LogoutComponent } from './logout/logout.component';
     MatToolbarModule,
 
   ],
-  providers: [ ],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
